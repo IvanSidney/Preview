@@ -103,13 +103,14 @@ const personalMovieDB = {
             // } else {
             //     personalMovieDB.genres[i - 1] = genre; 
             // }
-            let genres = prompt(`Введите ваши любиміе фильмі через запятую`);
+            let genres = prompt(`Введите ваши любиміе фильмі через запятую`).toLowerCase();
 
              if (genres === '' || genres == null) {
                 console.log('Вы ввели некоректныйе данные или не ввели их вовсе');
                 i--;
             } else {
                 personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres.sort();
             }
         }
 
