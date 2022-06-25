@@ -15,9 +15,14 @@ a {
 }
 
 .header {
+    background-color: black;    
+    padding: 0 20px;
+}
+
+.nav {
     display: flex;
     align-items:center;
-    background-color: black;
+    justify-content: space-between;
     height: 50px;
 }
 
@@ -43,8 +48,13 @@ a {
     font-size: 14px;
 }
 
+.nav-list li:last-of-type {
+    padding-right: 0;
+}
+
 .nav-list-link {
     position: relative;
+    transition: all .25s ease;
 }
 
 .nav-list-link::after {
@@ -55,8 +65,16 @@ a {
     position: absolute;
     bottom: -8px;
     left: 0;
-    /* transform: scaleX(0); */
+    transform: scaleX(0);
     transition: all .25s ease;
+}
+
+.nav-list-link:hover {
+    color: #17baaa;
+}
+
+.nav-list-link:hover::after{
+    transform: scale(1);
 }
 
 .nav-list li:last-of-type a {
