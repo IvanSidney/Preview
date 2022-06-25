@@ -15,23 +15,38 @@ a {
 }
 
 .header {
+    display: flex;
+    align-items:center;
     background-color: black;
-    line-height: 50px;
     height: 50px;
+}
+
+.logo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
 }
 
 .nav-list li {
     padding: 0 10px;
-    display: inline-block;
     color: white;
     font-weight: bold;
     font-size: 14px;
 }
 
 .nav-list li:last-of-type a {
-    display: block;
+    display: flex;
+    align-items: center;
     height: 30px;
-    line-height: 30px;
     background-color: #dd3d53;
     padding: 0 10px;
     border-radius: 3px;
@@ -44,4 +59,5 @@ a {
 
 .nav-list li:last-of-type a svg {
     width: 1em;
+    margin-right: 10px;
 }
