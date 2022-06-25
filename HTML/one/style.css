@@ -43,6 +43,22 @@ a {
     font-size: 14px;
 }
 
+.nav-list-link {
+    position: relative;
+}
+
+.nav-list-link::after {
+    content: "";
+    background: #17baaa;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .25s ease;
+}
+
 .nav-list li:last-of-type a {
     display: flex;
     align-items: center;
