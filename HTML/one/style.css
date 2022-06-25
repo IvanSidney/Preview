@@ -1,5 +1,7 @@
 body {
+    font-family: "Raleway","Helvetica","Arial",sans-serif;
     margin: 0;
+    
 }
 
 ul {
@@ -19,6 +21,27 @@ a {
 }
 
 .nav-list li {
+    padding: 0 10px;
     display: inline-block;
     color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-list li:last-of-type a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    background-color: #dd3d53;
+    padding: 0 10px;
+    border-radius: 3px;
+    transition: all .25s ease;
+}
+
+.nav-list li:last-of-type a:hover {
+    background-color: #c9233a;
+}
+
+.nav-list li:last-of-type a svg {
+    width: 1em;
 }
