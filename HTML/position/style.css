@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: forestgreen;
+}
+
+.parent {
+    padding: 10px 0;
+    margin-top: 50px;
+    background-color: indigo;
+    font-size: 36px;
+    color: white;
+}
+
+.child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 400px;
+    font-size: 36px;
+    color: white;
+}
+
+.child-1 {
+    background-color: brown;
+}
+
+.child-2 {
+    background-color: chocolate;
+}
+
+.child-3 {
+    background-color: burlywood;
+}
