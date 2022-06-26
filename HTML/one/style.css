@@ -15,13 +15,15 @@ a {
 }
 
 .header {
-    height: 100vh;
+    display: flex;
+    height: calc(100vh - 40px);
+    flex-direction: column;
     background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp') ; 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
     background-attachment: fixed;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .header::after {
@@ -37,18 +39,16 @@ a {
 }
 
 .nav {
-    position: relative;
+    position: absolute;
+    width: calc(1005 - 40px);
     z-index: 1;
     display: flex;
     align-items:center;
     justify-content: space-between;
-    height: 50px;
 }
 
-.logo-link {
-    display: flex;
-    height: 100%;
-    align-items: center;
+.logo-container {
+    line-height: 1.5;
 }
 
 .logo-img {
@@ -63,7 +63,7 @@ a {
 .nav-list li {
     padding: 0 10px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -103,7 +103,14 @@ a {
     background-color: #dd3d53;
     padding: 0 10px;
     border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
     transition: all .25s ease;
+}
+
+.heart {
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 .nav-list li:last-of-type a:hover {
@@ -112,5 +119,70 @@ a {
 
 .nav-list li:last-of-type a svg {
     width: 1em;
-    margin-right: 10px;
 }
+
+.nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+}
+
+.burger-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+    cursor: pointer;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    margin: auto 0;
+}
+
+.header-content-title {
+    font-size: 56px;
+    color: white;
+    line-height: 84px;
+}
+
+.header-content-title-green {
+    color: #17baaa;
+}
+
+.header-content-btn {
+    display: block;
+    background: #17baaa;
+    color: #fff;
+    font-size: 14px;
+    font-size: .875rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 100%;
+    min-height: 40px;
+    transition: all .25s ease;
+}
+
+.header-content-btn:hover {
+    background: #129185;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-list {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
