@@ -15,11 +15,30 @@ a {
 }
 
 .header {
-    background-color: black;    
+    height: 100vh;
+    background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp') ; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
     padding: 0 20px;
 }
 
+.header::after {
+    content: "";
+    background: #0c3632;
+    position: absolute;
+    opacity: .85;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+}
+
 .nav {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items:center;
     justify-content: space-between;
