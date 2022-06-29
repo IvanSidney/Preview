@@ -1,0 +1,68 @@
+.box-container {
+    position: relative;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 300px); */
+    /* grid-template-rows: 300px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.box-1 {
+    /* height: 300px; */
+    /* order: 3; */
+    background-color: red;
+}
+
+.box-2 {
+    left: 210px;
+    background-color: green;
+    /* order: 4; */
+}
+
+.box-3 {
+    left: 420px;
+    background-color: blue;
+    /* order: 5; */
+}
+
+.box-4 {
+    left: 630px;
+    background-color: pink;
+    /* order: 1; */
+}
+
+.box-5 {
+    left: 840px;
+    background-color: yellow;
+    /* order: 2; */
+}
+
+
+/* 
+
+Flexbox
+Grid
+inline-block
+Float                   .box-container::after {
+                         content: "";
+                         display: block;
+                         clear: both;
+                         }
+Position absolute
+Transform
+
+*/
+
+
+
+
+
+
+
