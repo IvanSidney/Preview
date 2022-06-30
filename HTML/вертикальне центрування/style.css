@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.parent {
+    height: 400px;
+    background-color: aqua;
+    text-align: center;
+    /* line-height: 400px; */
+
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-right: 10px;
+
+}
+
+.img {
+    width: 10%;
+}
