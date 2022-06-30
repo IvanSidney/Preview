@@ -1,0 +1,24 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+
+/* about style */
+.about {
+    background-color: yellow;
+}
+
+/* projects style */
+.projects {
+    background-color: chocolate;
+}
+
+/* work style */
+.work {
+    background-color: cyan;
+}
+
+/* education style */
+.education {
+    background-color: darkblue;
+}
