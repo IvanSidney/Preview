@@ -1,0 +1,70 @@
+$darc-pink: #1224c7;
+$size-x: 72px;
+
+.test {
+    color: $darc-pink;
+    font-size: $size-x;
+    &:hover {
+        color: green;
+    }
+    &::after {
+        content: "hhfhhfkjka";
+    }
+}
+
+// .test:hover {
+//     color: #11b62c;
+// }
+
+p {
+    width: 100%;
+}
+
+.test-1 {
+    color: $darc-pink;
+}
+.test-2 {
+    color: $darc-pink;
+}
+.test-3 {
+    color: $darc-pink;
+}
+.test-4 {
+    color: $darc-pink;
+}
+.test-5 {
+    color: $darc-pink;
+}
+.test-6 {
+    color: $darc-pink;
+}
+.test-7 {
+    color: $darc-pink;
+}
+.test-8 {
+    color: $darc-pink;
+}
+.test-9 {
+    color: $darc-pink;
+}
+
+@mixin btn($border-width, $font-size, $color) {
+    border: $border-width solid yellow;
+    font-size: $font-size;
+    color: $color;
+}
+
+.btn-1 {
+    @include btn(2px, 18px, pink)
+}
+.btn-2 {
+    @include btn(4px, 20px, red)
+}
+.btn-3 {
+   @include btn(6px, 22px, green)
+}
+.btn-4 {
+   @include btn(8px, 24px,black)
+}
+
+
