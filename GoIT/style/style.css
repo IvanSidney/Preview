@@ -3,6 +3,18 @@ body {
     ;
 }
 
+/* main style */
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    background: #F5F7FA;
+}
+
+/* main-content style */
+.main-content {
+    background: #FFFFFF;
+}
+
 /* about style */
 .about {
     background-color: yellow;
@@ -11,6 +23,10 @@ body {
 /* projects style */
 .projects {
     background-color: chocolate;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    margin-left: 60px;
+    margin-right: 90px;
 }
 
 /* work style */
@@ -21,4 +37,9 @@ body {
 /* education style */
 .education {
     background-color: darkblue;
+}
+
+/* sidebar style */
+.sidebar {
+    background: #1E2939;
 }
