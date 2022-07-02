@@ -10,15 +10,13 @@ body {
     background: #F5F7FA;
     width: 1280px;
     margin: 0 auto;
-    /* position: relative; */
 }
 
 /* main-content style */
 .main-content {
-    /* position: absolute; */
     background: #FFFFFF;
-    width: 1200px;
-    margin: 20px;
+    margin: 40px 40px 40px 0;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* about style */
@@ -40,6 +38,7 @@ body {
     background: #1E2939;
     padding-top: 40px;
     width: 370px;
+    margin: 40px 0 40px 40px;
 }
 
 .contacts,
