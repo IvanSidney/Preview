@@ -14,24 +14,152 @@ body {
 
 /* main-content style */
 .main-content {
+    padding: 105px 90px;
     background: #FFFFFF;
     margin: 40px 40px 40px 0;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* about style */
-.about {}
+.about {
+    margin-bottom: 40px;
+}
+
+.about-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.about-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    width: 400px;
+}
 
 /* projects style */
-.projects {}
+.projects {
+    margin-bottom: 50px;
+}
 
-.projects-title {}
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.projects-list {
+    padding: 0;
+    margin-left: 15px;
+}
+
+.projects-item,
+.project-braket {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.project {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.project-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin-left: 15px;
+}
+
 
 /* work style */
-.work {}
+.work {
+    margin-bottom: 40px;
+}
+
+.work-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.organization {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+    margin-bottom: 10px;
+}
+
+.work-list {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.period {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A8A8A8;
+    margin-bottom: 10px;
+}
+
+.line {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+
+.work-list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin-right: 100px;
+}
 
 /* education style */
-.education {}
+
+.education-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+}
 
 /* sidebar style */
 .sidebar {

@@ -20,9 +20,9 @@
         <div class="main-content">
             <!--About user-->
             <div class="about">
-                <h4>Front-End Developer</h4>
-                <h1>Anton Chornyi</h1>
-                <p>
+                <h4 class="about-position">Front-End Developer</h4>
+                <h1 class="about-name">Ivan Sidielnikov</h1>
+                <p class="about-description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                     Quis ipsum suspendisse ultrices gravida.
@@ -31,77 +31,86 @@
             </div>
             <!--Projects-->
             <div class="projects">
-                <h2>Projects</h2>
-                <ol>
-                    <li>
-                        <a href="https://hellenglish.goit.global/">https://hellenglish.goit.global/</a>
-                        .............
-                        [ HTML5, CSS3 ]
+                <h2 class="title">Projects</h2>
+                <ol class="projects-list">
+                    <li class="projects-item">
+                        <span class="project">
+                            <a href="https://hellenglish.goit.global/"
+                                class="project-link">https://hellenglish.goit.global/</a>
+                            .............
+                            <span class="project-braket">[</span> HTML5, CSS3 <span
+                                class="project-braket">]</span></span>
                     </li>
-                    <li>
-                        <a href="https://cryptohub.goit.global/">https://cryptohub.goit.global/</a>
-                        ..............
-                        [ JavaScript ]
+                    <li class="projects-item">
+                        <span class="project">
+                            <a href="https://cryptohub.goit.global/"
+                                class="project-link">https://cryptohub.goit.global/</a>
+                            ..............
+                            <span class="project-braket">[</span> JavaScript <span
+                                class="project-braket">]</span></span>
                     </li>
-                    <li>
-                        <a href="https://kidslike.goit.global/">https://kidslike.goit.global/</a>
-                        ..................
-                        [ React.js, Node.js ]
+                    <li class="projects-item">
+                        <span class="project">
+                            <a href="https://kidslike.goit.global/"
+                                class="project-link">https://kidslike.goit.global/</a>
+                            ....................
+                            <span class="project-braket">[</span> React.js, Node.js <span
+                                class="project-braket">]</span></span>
                     </li>
                 </ol>
             </div>
             <!--Work-->
             <div class="work">
-                <h2>Work Experience</h2>
+                <h2 class="title">Work Experience</h2>
                 <!--Company 1-->
                 <div>
-                    <h3>Front-End Developer Freelance</h3>
-                    <P>September 2019 - up to now | Country</P>
-                    <ul>
-                        <li>
+                    <h3 class="work-position">Front-End Developer <span class="organization">Freelance</span></h3>
+                    <P class="period">September 2019 - up to now <span class="line">|</span> Country</P>
+                    <ul class="work-list">
+                        <li class="work-list-item">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Risus commodo viverra maecenas.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                         </li>
                     </ul>
                 </div>
                 <!--Company 2-->
                 <div>
-                    <h3>Manager Roga & Kopyta New</h3>
-                    <p>March 2015 - October 2018 | Country</p>
-                    <ul>
-                        <li>
+                    <h3 class="work-position">Manager <span class="organization">Roga & Kopyta New</span></h3>
+                    <p class="period">March 2015 - October 2018 <span class="line">|</span> Country</p>
+                    <ul class="work-list">
+                        <li class="work-list-item">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             labore et dolore magna aliqua.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Quis ipsum suspendisse ultrices gravida.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Risus commodo viverra maecenas.
                         </li>
                     </ul>
                 </div>
                 <!--Company 3-->
                 <div>
-                    <h3>Manager Roga & Kopyta LLC </h3>
-                    <p>June 2014 - February 2015 | Country</p>
-                    <ul>
-                        <li>
+                    <h3 class="work-position">Manager <span class="organization"> Roga & Kopyta LLC</span></h3>
+                    <p class="period">June 2014 - February 2015 <span class="line">|</span> Country</p>
+                    <ul class="work-list">
+                        <li class="work-list-item">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Quis ipsum suspendisse ultrices gravida.
                         </li>
-                        <li>
+                        <li class="work-list-item">
                             Risus commodo viverra maecenas.
                         </li>
                     </ul>
@@ -109,10 +118,10 @@
             </div>
             <!--Education-->
             <div class="education">
-                <h2>Education</h2>
-                <h3>National University of Radioelectronics</h3>
+                <h2 class="title">Education</h2>
+                <h3 class="education-position">National University of Radioelectronics</h3>
                 <h4>Management</h4>
-                <p>September 2009 - June 2014 | Country</p>
+                <p class="period">September 2009 - June 2014 <span class="line">|</span> Country</p>
             </div>
         </div>
         <!--Sidebar-->
@@ -123,11 +132,11 @@
                 <h2 class="sidebar-title">Contacts</h2>
                 <p>
                     <span class="contact-type">C:</span>
-                    <a href="tel:+77777777777" class="contact-link">+7 777 777 77 77</a>
+                    <a href="tel:+380500854045" class="contact-link">+38 050 085 40 45</a>
                 </p>
                 <p>
                     <span class="contact-type">E:</span>
-                    <a href="mailto:chornyiav@gmail.com" class="contact-link">chornyiav@gmail.com</a>
+                    <a href="mailto:ivansidney7@gmail.com" class="contact-link">ivansidney7@gmail.com</a>
                 </p>
             </div>
             <!--Tech Skills-->
