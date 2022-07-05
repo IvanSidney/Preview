@@ -32,17 +32,19 @@
 
 // console.log(typeof([] + false));  //"false"  строка
 // console.log(typeof([] + false - null + true)); // NaN число
+console.log(typeof ([] + false - null + true)); // NaN число
 
 // let y = 1;
 // let x = y = 2;
 // alert(x);
+// [ ] + 1 + 2
 // [ ] + 1 + 2
 
 // console.log([] + 1 + 2);  //"12"
 // // alert( "1"[0] );  // 1
 // 2 && 1 && null && 0 && undefined;
 // console.log(2 && 1 && null && 0 && undefined); // И запинается на лжи
-                                                // ИЛИ запинается на правде
+// ИЛИ запинается на правде
 // !!( a && b )   (a && b);
 // console.log(!!(1 && 2) === (1 && 2));// !! превращает в булиновое значение
 // alert( null || 2 && 3 || 4 );  // 3
