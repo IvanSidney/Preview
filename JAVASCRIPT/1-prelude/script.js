@@ -8,3 +8,6 @@ const greetingsForUser2 = "Hello my dear user";
 // alert(greetingsForUser);
 
 console.log(greetingsForUser2);
+console.log(greetingsForUser2);
+console.log(greetingsForUser2);
+console.log(greetingsForUser2);
