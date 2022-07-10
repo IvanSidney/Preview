@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+
+for (let i = 0; i < 20; i++) {
+    arr[i] = +prompt("Введіть до 20 чисел");
+
+    if (arr[i] == 0 || arr[i] == null) {
+        break;
+    }
+}
+
+let min = arr[0];
+let max = min;
+
+for (let i = 1; i < arr.length; ++i) {
+    if (arr[i] > max) {
+        max = arr[i];
+    }
+
+    if (arr[i] < min) {
+        min = arr[i];
+    }
+}
+
+console.log(max);
+        for (let i = 0; i < max - 1; i++) {
+    for (let j = arr[i]; j <= (max - i - 1) / 2; j++) {
+        console.log("1");
+    }
+
+    for (let k = arr[i]; k > 0; k--) {
+        console.log("*");
+    }
+
+    console.log("");
+}
+    </script>
+</body>
+</html>
