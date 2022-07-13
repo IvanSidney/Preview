@@ -537,26 +537,37 @@ var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _bootstrap = require("bootstrap");
 var _api = require("./api");
 var _apiDefault = parcelHelpers.interopDefault(_api);
+console.log("im here");
 function init() {
-    const data = (0, _apiDefault.default).getData() || [];
-    data.forEach((item)=>{
-        console.log(item.name);
-        const li = document.createElement("li");
-        li.innerHTML = `<div class="input-group mb - 3">
+    var myModal = (0, _bootstrap.Modal)(document.getElementById("exampleModal"));
+    renderTodos();
+    document.getElementById("onSaveTodo").addEventListener("click", ()=>{
+        const input = document.getElementById("toDoName");
+        (0, _apiDefault.default).addTodo({
+            name: input.value
+        });
+        myModal.hide();
+        input.value = "";
+        renderTodos();
+    });
+    function renderTodos() {
+        document.getElementById("container").innerHTML = "";
+        const data = (0, _apiDefault.default).getData();
+        data.forEach((item)=>{
+            const li = document.createElement("li");
+            li.id = item.id;
+            li.innerHTML = `<div class="input-group mb - 3">
                             <div class="input-group-text">
                                 <input class="form-check-input mt-0" type="checkbox" value="" />
                             </div>
                                 <input type="text" class="form-control" value="${item.name}" />
+                                <div class="input-group-text">"test"</div>
                         </div>`;
-        document.getElementById("container").appendChild(li);
-    });
-    document.getElementById("onSaveTodo").addEventListener("click", ()=>{
-        const input = document.getElementById("toDoName");
-        console.log(input.value);
-    });
+            document.getElementById("container").appendChild(li);
+        });
+    }
 }
 init();
-console.log("im here");
 
 },{"bootstrap/dist/css/bootstrap.min.css":"i5LP7","bootstrap":"h36JB","./api":"8Zgej","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i5LP7":[function() {},{}],"h36JB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -6194,11 +6205,19 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const Api = {
     getData () {
-        const items = localStorage.getItem("items") || "[]";
-        return JSON.parse(localStorage.getItem("items"));
+        try {
+            return JSON.parse(localStorage.getItem("items")) || [];
+        } catch (e) {
+            return [];
+        }
     },
     setData (todoItems) {
-        localStorage.setItem(JSON.stringify(todoItems));
+        localStorage.setItem("items", JSON.stringify(todoItems));
+    },
+    addTodo (item) {
+        const data = this.getData();
+        data.push(item);
+        this.setData(data);
     }
 };
 exports.default = Api;

@@ -1,12 +1,24 @@
 const Api = {
 
     getData() {
-        const items = localStorage.getItem('items') || '[]';
-        return JSON.parse(localStorage.getItem('items'));
+        try {
+            return JSON.parse(localStorage.getItem('items')) || [];
+        } catch (e) {
+            return [];
+        }
+        
+        
     },
 
     setData(todoItems) {
-        localStorage.setItem(JSON.stringify(todoItems));
+        localStorage.setItem('items', JSON.stringify(todoItems));
+    },
+
+    addTodo(item) {
+        const data = this.getData();
+        data.push(item);
+        this.setData(data);
+        
     }
 };
 
