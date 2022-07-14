@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Modal } from 'bootstrap';
+import {
+    Modal
+} from 'bootstrap';
 import Api from './api';
 
 console.log("im here");
 
 function init() {
 
-    let myModal = new Modal(document.getElementById('exampleModal'),);
+    let myModal = new Modal(document.getElementById('exampleModal'), );
     renderTodos();
 
     document.getElementById('onSaveTodo').addEventListener('click', () => {
@@ -28,17 +30,19 @@ function init() {
             Api.removeTodo(numberToRemuve);
             renderTodos();
         }
-    }, {capture: true});
+    }, {
+        capture: true
+    });
 
-     function renderTodos() {
+    function renderTodos() {
 
         document.getElementById('container').innerHTML = '';
         const data = Api.getData();
-    
-    data.forEach((item) => {
-        const li = document.createElement('li');
-        li.id = item.id;
-        li.innerHTML = `<div class="input-group mb-3">
+
+        data.forEach((item) => {
+            const li = document.createElement('li');
+            li.id = item.id;
+            li.innerHTML = `<div class="input-group mb-3">
                 <div class="input-group-text">
                     <input class="form-check-input mt-0" type="checkbox" value="">
                 </div>
@@ -47,11 +51,10 @@ function init() {
                     <button type="button" class="btn btn-primary remove-todo">Remove</button>
                 </div>
             </div>`;
-        document.getElementById('container').appendChild(li);
+            document.getElementById('container').appendChild(li);
 
-    });
+        });
     }
 
 }
 init();
-
