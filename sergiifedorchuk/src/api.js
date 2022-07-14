@@ -18,7 +18,14 @@ const Api = {
         const data = this.getData();
         data.push(item);
         this.setData(data);
-        
+    },
+
+    removeTodo(index) {
+        const data = this.getData();
+        console.log(data);
+        data.splice(index, 1);
+        console.log(data);
+        this.setData(data);
     }
 };
 
