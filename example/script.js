@@ -1,124 +1,136 @@
-"use strict";
-// let user = {};
-// user["8:30"] = "Вставай";
-// user.surname = "Smit";
-// // user.name = "Petro";
-// // delete user.name;
+// let input = prompt("Enter a sentence:");
 
-// let salaries = {
-//     John: 100,
-//     Ann: 160,
-//     Pete: 130
-// };
-// let sum = 0;
+// let wordsCounter = 0;
+// let longWord = "";
+// for (let i = 0, code, flag; i < input.length; i++) {
+//     code = input.charCodeAt(i);
+//     flag = false;
 
-
-// for (let key in salaries) {
-
-//     sum += salaries[key];
-// }
-
-// console.log(sum);
-
-// // function  salariesSum(salaries) {
-//     for (let key in salaries) {
-//         // console.log(key);
-//         console.log(salaries[key]);
-//     }
-// // }
-
-// let menu = {
-//     width: 200,
-//     height: 300,
-//     title: "Моє меню"
-// };
-
-// function multiplyNumeric(menu) {
-//     for (let key in menu) {
-//         if (typeof menu[key] == 'number') {
-//             menu[key] *= 2;
+//     while (code >= 65 && code <= 90 || code >= 97 && code <= 122) {
+//         code = input.charCodeAt(++i)
+//         flag = true;
+//         if (flag) {
+//             longWord += `${input[i]}`;
+//             console.log(longWord);
 //         }
 //     }
-// }
-// multiplyNumeric(menu);
-// console.log(menu);
 
-
-// let user = {
-//     name: "Іван"
-// };
-// let admin = {
-//     name: "Адмін"
-// };
-
-// function sayHi() {
-//     alert(this.name);
+//     if (flag) {
+//         wordsCounter++;
+//     }
 // }
 
-// // використовуємо одну і ту ж функцію у двох об’єктах
-// user.f = sayHi;
-// admin.f = sayHi;
+// console.log(wordsCounter);
 
-// // виклики функцій, приведені нижче, мають різні this
-// // "this" всередині функції являється посиланням на об’єкт "перед крапкою"
-// user.f(); // Іван  (this == user)
-// admin.f(); // Адмін  (this == admin)
 
-// admin['f']();
-// Створіть об’ єкт calculator з трьома методами:
 
-// read() запитує два значення та зберігає їх як властивості
-// об’ єкта з іменами a та b відповідно.
-// sum() повертає суму збережених значень.
-//     mul() множить збережені значення і повертає результат.
+// function wow(a) {
+//     a = a + 1;
 
-// let calculator = {
-//     read() {
-//         this.a = +prompt(`Enter number 1`);
-//         this.b = +prompt(`Enter number 2`);
-//     },
-//     sum() {
-//         return this.a + this.b;
-//     },
-//     mul() {
-//         return this.a * this.b;
+//     return a;
+// }
+
+// let a = 10;
+
+// console.log(wow(a));
+
+
+// let min = function () {
+//     for (let i = 0; i < list.length; i++) {
+//         for (let j = 1; j < list.length; j++) {
+//             if (list[j] < list[i]) {
+//                 list[0] = list[j];
+//             }
+//         }
 //     }
 
+//     return list[0];
 // };
 
-// calculator.read();
-// alert(calculator.sum());
-// alert(calculator.mul());
+// console.log(min(list));
+// let list = [-52, 56, 30, 29, -54, 0, -110];
 
-// Ланцюг викликів
-// важливість: 2
-// Існує об’ єкт ladder, що дозволяє підійматися вгору - вниз:
 
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this;
-    },
-    down() {
-        this.step--;
-        return this;
-    },
-    showStep() { // показує поточний крок
-        alert(this.step);
-        return this;
-    },
-};
-// Тепер, якщо нам потрібно зробити кілька викликів послідовно,
-//     можна зробити це так:
+// var min = function (list) {
+//     let minArr = [];
+//     for (let i = 0; i < list.length; i++) {
+//         for (let j = 1; j < list.length; j++) {
+//             if (list.length == 1) {
+//                 minArr[0] = list[0]
+//             }
+//             if (list[i] < list[j] && list[i] < minArr[0]) {
+//                 minArr[0] = list[i]
+//             } else {
+//                 minArr[0] = list[j]
+//             }
+//         }
+//     }
+//     return minArr[0];
+// }
 
-// ladder.up();
-// ladder.up();
-// ladder.down();
-// ladder.showStep(); // 1
-// ladder.down();
-// ladder.showStep(); // 0
-// Змініть код up, down і showStep так,
-// щоб зробити доступним ланцюг викликів, наприклад:
+// var max = function (list) {
+//     let maxArr = [];
+//     for (let i = 0; i < list.length; i++) {
+//         for (let j = 1; j < list.length; j++) {
+//             if (list.length == 1) {
+//                 maxArr[0] = list[0];
+//             }
+//             if (list[i] > list[j]) {
+//                 maxArr[0] = list[i]
+//             } else {
+//                 maxArr[0] = list[j]
+//             }
+//         }
+//     }
 
-ladder.up().up().up().up().up().down().showStep().down().showStep(); // shows 1 then 0
+//     return maxArr[0];
+// }
+// console.log(min(list));
+// console.log(max(list));
+
+// function strRand() {
+//     let result = [];
+//     let words = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+//     let maxPosition = words.length - 1;
+//     let maxI = Math.floor(Math.random() * 10);
+//     for (let i = 0; i < maxI; ++i) {
+//         let position = Math.floor(Math.random() * maxPosition);
+//         let abc = words.substring(position, position + Math.floor(Math.random() * 5));
+//         let num123 = Math.floor(Math.random() * 1000);
+//         let item = Math.floor(Math.random() * 2);
+//         result[i] = item == 1 ? abc : num123;
+//     }
+
+//     return result;
+// }
+
+// // console.log(strRand());
+// // console.log(Math.floor(Math.random() * 10));
+
+// let l = strRand();
+
+
+// function filter_list(l) {
+
+//     let arr = l.flatMap(x => Number.isFinite(x));
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         if (!arr[i]) {
+//             l.splice(i, 1);
+//         }
+//     }
+
+//     return l;
+// }
+
+// filter_list(l);
+
+
+// console.log(l);
+let arr1 = [12, 33, 34, 15, 98];
+let arr2 = [152, 353, 354, 155, 958];
+
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+}
+
+console.log(arrayPlusArray(arr1, arr2));
