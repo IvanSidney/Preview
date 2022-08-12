@@ -1,20 +1,67 @@
 window.addEventListener('DOMContentLoaded', () => {
     let startButton = document.querySelector('.start'),
-        stopButton,
+        stopButton = document.querySelector('.start, .stop'),
         setButton = document.querySelector('.settings'),
         setButtonImg = document.querySelector('.settings').childNodes[1],
-        resetButton = document.querySelector('.settings, .set'),
+        checkButton = document.querySelector('.settings, .set'),
         ring = document.querySelector('.ring'),
-        secondInterval;
+        secondInterval,
+        flag = true;
 
-    // function toggleBilling() {
-    //     var billingItems = document.querySelectorAll('input[type="text"]');
-    //     for (var i = 0; i < billingItems.length; i++) {
-    //         billingItems[i].disabled = !billingItems[i].disabled;
-    //     }
-    // }
-    // toggleBilling();
+    function toggleInput() {
+        var inputItems = document.querySelectorAll('input[type="text"]');
+        for (var i = 0; i < inputItems.length; i++) {
+            inputItems[i].disabled = !inputItems[i].disabled;
+        }
+    }
 
+    setButton.addEventListener('click', setTimer);
+
+    function setTimer() {
+        flag = true;
+        if (stopButton.classList.contains('stop')) {
+            stopTimer();
+            flag = false;
+        }
+        toggleInput();
+        setButtonImg.src = 'images/check.svg';
+        setButton.classList.add('set');
+        setButton.removeEventListener('click', setTimer);
+        checkButton.addEventListener('click', checkTimer);
+        startButton.removeEventListener('click', startTimer);
+    }
+
+    function checkTimer() {
+        let minutes = getMinutes(),
+            seconds = getSeconds();
+        if (minutes >= 99 || minutes === '') {
+            alert("max minutes = 98, max seconds = 99");
+            return setTimer(),
+                toggleInput();
+        }
+        if (seconds >= 100 || seconds === '') {
+            alert("max minutes = 98, max seconds = 99");
+            return setTimer(),
+                toggleInput();
+        }
+        if (seconds > 59) {
+            setMinutes(Number(minutes) + 1);
+            setSeconds(Number(seconds) - 60);
+        }
+        setMinutes(Number(minutes));
+        setSeconds(Number(seconds));
+        toggleInput();
+        setButtonImg.src = 'images/gear.svg';
+        checkButton.removeEventListener('click', checkTimer);
+        setButton.addEventListener('click', setTimer);
+        if (!flag) {
+            startTimer();
+        }
+
+        if (!startButton.addEventListener('click', startTimer)) {
+            startButton.addEventListener('click', startTimer);
+        }
+    }
 
     function getZero(num) {
         if (num >= 0 && num < 10) {
@@ -24,59 +71,6 @@ window.addEventListener('DOMContentLoaded', () => {
             return num;
         }
     }
-
-    function promptTime() {
-        let promptMinutes,
-            promptSeconds;
-        do {
-            promptMinutes = prompt('Enter minutes, max 98');
-        }
-        while (promptMinutes >= 99 || promptMinutes === null || promptMinutes === '');
-        do {
-            promptSeconds = prompt('Enter seconds, max 99');
-        }
-        while (promptSeconds >= 100 || promptSeconds === null || promptSeconds === '');
-        if (promptSeconds > 59) {
-            promptMinutes++;
-            promptSeconds -= 60;
-        }
-
-        setMinutes(promptMinutes);
-        setSeconds(promptSeconds);
-        setButtonImg.src = 'images/check.svg';
-        setButton.classList.add('set');
-        setButton.removeEventListener('click', promptTime);
-        resetButton.addEventListener('click', resetTimer);
-        if (startButton.classList.contains('stop')) {
-            startButton.classList.toggle('stop');
-        }
-        startButton.innerHTML = 'start';
-        if (ring.classList.contains('ending')) {
-            ring.classList.remove('ending');
-        }
-        startButton.addEventListener('click', startTimer);
-        cler();
-
-    }
-
-    function resetTimer() {
-        setMinutes(0);
-        setSeconds(0);
-        setButtonImg.src = 'images/gear.svg';
-        setButton.classList.remove('set');
-        resetButton.removeEventListener('click', resetTimer);
-        setButton.addEventListener('click', promptTime);
-        if (startButton.classList.contains('stop')) {
-            startButton.classList.toggle('stop');
-        }
-        if (ring.classList.contains('ending')) {
-            ring.classList.remove('ending');
-        }
-        startButton.innerHTML = 'start';
-        cler();
-        startButton.addEventListener('click', startTimer);
-    }
-    setButton.addEventListener('click', promptTime);
 
     startButton.addEventListener('click', startTimer);
 
@@ -89,7 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
         startButton.removeEventListener('click', startTimer);
         secondInterval = setInterval(updateSeconds, 1000);
         updateSeconds();
-        stopButton = document.querySelector('.stop');
         stopButton.addEventListener('click', stopTimer);
     }
 
