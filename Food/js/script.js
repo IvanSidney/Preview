@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     // Timer
-    const dedline = '2022-08-07';
+    const dedline = '2022-08-14';
 
     function getTimeRemaining(endtime) {
         let days, hours, minutes, seconds;
