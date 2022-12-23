@@ -220,7 +220,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'menu__item'
     ).render();
 
-    //Forms
+    //Forms.
 
     const forms = document.querySelectorAll('form');
 
