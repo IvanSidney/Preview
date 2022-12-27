@@ -53,3 +53,8 @@ const obj = {
     cat: 'animal'
 };
 
+const newArr = Object.entries(obj)
+.filter(item => item[1] === 'persone')
+.map(item => item[0]);
+
+console.log(newArr);
