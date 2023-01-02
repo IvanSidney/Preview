@@ -1,8 +1,4 @@
-function timer() {
-   
-    // Timer
-
-    const dedline = '2022-12-31';
+function timer(id, dedline) {
 
     function getTimeRemaining(endtime) {
         let days, hours, minutes, seconds;
@@ -62,7 +58,7 @@ function timer() {
             }
         }
     }
-    setClok('.timer', dedline);
+    setClok(id, dedline);
 }
 
-module.exports = timer;
+export default timer;
