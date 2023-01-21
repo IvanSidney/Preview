@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import { Button } from './App';
 import styled from 'styled-components';
-import BootstrapTest from './BootstrapTest';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,7 +19,6 @@ root.render(
   <React.StrictMode>
     <App />
     <BigButton as="a">Send</BigButton>
-    <BootstrapTest/>
   </React.StrictMode>
 );
 
